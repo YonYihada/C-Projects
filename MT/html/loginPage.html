@@ -1,177 +1,172 @@
-//AI-made log in page
-//im gonna study this
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+    <style>
+        /*COLOR THEME: #f02e2e*/
+        /*NONE OF THESE HAVE BEEN REVISED*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-    body {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-    }
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url("valbg.jpg") center/cover no-repeat fixed;
+        }
 
-    .login-container {
-      width: 380px;
-      padding: 40px;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    }
+        .login-container {
+            width: 380px;
+            padding: 40px;
+            background: white;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
 
-    .login-container h1 {
-      text-align: center;
-      margin-bottom: 10px;
-      color: #222;
-    }
+        .login-container h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #222;
+        }
 
-    .subtitle {
-      text-align: center;
-      color: #777;
-      margin-bottom: 30px;
-    }
+        .subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 30px;
+        }
 
-    .input-group {
-      margin-bottom: 20px;
-    }
+        .input-group {
+            margin-bottom: 20px;
+        }
 
-    .input-group label {
-      display: block;
-      margin-bottom: 8px;
-      color: #333;
-      font-weight: bold;
-    }
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
 
-    .input-group input {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      outline: none;
-      font-size: 15px;
-      transition: 0.3s;
-    }
+        .input-group input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
 
-    .input-group input:focus {
-      border-color: #667eea;
-      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
-    }
+        .input-group input:focus {
+            border-color: #0e0e0e;
+        }
 
-    .options {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 25px;
-      font-size: 14px;
-    }
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
 
-    .options a {
-      color: #667eea;
-      text-decoration: none;
-    }
+        .options a {
+            color: #667eea;
+            text-decoration: none;
+        }
 
-    .options a:hover {
-      text-decoration: underline;
-    }
+        .options a:hover {
+            text-decoration: underline;
+        }
 
-    .login-btn {
-      width: 100%;
-      padding: 13px;
-      border: none;
-      border-radius: 8px;
-      background: #667eea;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+        .login-btn {
+            width: 20%;
+            aspect-ratio: 1 / 1;
+            display: block;
+            margin: 0 auto;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #ea6666, #cc2525);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-    .login-btn:hover {
-      background: #5568d9;
-    }
+        .login-btn:hover {
+            border-color: #f02e2e;
+            box-shadow: 0 0 0 3px rgba(234, 102, 102, 0.5);
+        }
 
-    .signup {
-      text-align: center;
-      margin-top: 25px;
-      color: #777;
-      font-size: 14px;
-    }
+        .signup {
+            text-align: center;
+            margin-top: 26px;
+            color: #777;
+            font-size: 14px;
+        }
 
-    .signup a {
-      color: #667eea;
-      font-weight: bold;
-      text-decoration: none;
-    }
+        .signup:hover {
+            color: #cc2525;
+        }
 
-    @media (max-width: 450px) {
-      .login-container {
-        width: 90%;
-        padding: 30px 25px;
-      }
-    }
-  </style>
+        .signup a {
+            color: #7a7a7a;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        @media (max-width: 450px) {
+            .login-container {
+                width: 90%;
+                padding: 30px 25px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <div class="login-container">
-    <h1>Welcome Back</h1>
-    <p class="subtitle">Login to your account</p>
+    <div class="login-container">
+        <h1>Log In</h1>
 
-    <form>
-      <div class="input-group">
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="Enter your email"
-          required
-        >
-      </div>
+        <form>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
 
-      <div class="input-group">
-        <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          placeholder="Enter your password"
-          required
-        >
-      </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
 
-      <div class="options">
-        <label>
-          <input type="checkbox">
-          Remember me
-        </label>
+            <div class="options">
+                <label>
+                    <input type="checkbox">
+                    Stay signed in
+                </label>
+            </div>
 
-        <a href="#">Forgot password?</a>
-      </div>
+            <button type="submit" class="login-btn">
+                ➤
+            </button>
+        </form>
 
-      <button type="submit" class="login-btn">
-        Log In
-      </button>
-    </form>
-
-    <p class="signup">
-      Don't have an account?
-      <a href="#">Sign up</a>
-    </p>
-  </div>
+        <p class="signup">
+            <a href="#">Can't sign in?</a>
+            <br>
+            <a href="#">Create an Account</a>
+        </p>
+    </div>
 
 </body>
-</html>
 
+</html>
