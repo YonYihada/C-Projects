@@ -110,9 +110,8 @@ input[type="checkbox"]:hover {
     color: #020000;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
     .container {
-        width: 90%;
-        padding: 30px 25px;
+        width: 60%;
     }
 }
