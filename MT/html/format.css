@@ -1,11 +1,11 @@
-* {
+* { /*defaults*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
-body { /* Background image and styling for the body */
+body { 
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -13,37 +13,37 @@ body { /* Background image and styling for the body */
     background: url("valbg.jpg") center/cover no-repeat fixed;
 }
 
-.container { /* Styling for the container that holds the form */
+.container {
     width: 380px;
     padding: 40px;
     background: white;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
-.container h1 { /* Styling for the main heading */
+.container h1 { 
     text-align: center;
     margin-bottom: 10px;
     color: #222;
 }
 
-.subtitle { /* Styling for the subtitle text */
+.subtitle { 
     text-align: center;
     color: #777;
     margin-bottom: 30px;
 }
 
-.input-group { /* Styling for each input group */
+.input-group { 
     margin-bottom: 20px;
 }
 
-.input-group label { /* Styling for the labels of the input fields */
+.input-group label { 
     display: block;
     margin-bottom: 8px;
     color: #333;
     font-weight: bold;
 }
 
-.input-group input { /* Styling for the input fields */
+.input-group input { 
     width: 100%;
     padding: 13px;
     border: 1px solid #eeeeee;
@@ -111,7 +111,7 @@ input[type="checkbox"]:hover {
 }
 
 @media (max-width: 450px) {
-    .login-container {
+    .container {
         width: 90%;
         padding: 30px 25px;
     }
