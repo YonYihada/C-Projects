@@ -17,7 +17,7 @@ body {
     width: 300px;
     text-align: center;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
 }
 
 /* Circular profile image */
@@ -26,17 +26,42 @@ body {
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #333;
+    border: 3px solid lightgray;
 }
 
-/* Name and course */
-.name {
+.heading {
     margin: 15px 0 5px 0;
     font-size: 22px;
 }
 
-.course {
-    margin: 0;
+.small-text {
+    font-weight: bold;
+    margin: 4px;
+    color: #0a0a0a;
+    font-size: 14px;
+    margin: 20px 0 4px 0;
+}
+
+.subtext {
+    margin: 16px;
     color: #555;
     font-size: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    text-align: left;
+}
+
+table, th, td {
+    border: 1px solid #a0a0a0;
+    padding: 6px;
+}
+
+.blue-cell {
+    background-color: rgb(16, 32, 255);
+    border-color: white;
+    color: white;
 }
