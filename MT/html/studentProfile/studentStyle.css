@@ -1,0 +1,42 @@
+/* Page background */
+body {
+    background-color: lightgray;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Centered card */
+.card {
+    background-color: white;
+    border: 2px solid #ccc;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Circular profile image */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #333;
+}
+
+/* Name and course */
+.name {
+    margin: 15px 0 5px 0;
+    font-size: 22px;
+}
+
+.course {
+    margin: 0;
+    color: #555;
+    font-size: 16px;
+}
