@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Popup Example</title>
+  <style>
+    /* Style the clickable text link */
+    .video-link {
+      color: #0066cc;
+      text-decoration: underline;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    /* Style the popup modal container */
+    dialog {
+      border: none;
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Style the dim background overlay */
+    dialog::backdrop {
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    /* Layout inside the popup */
+    .popup-content {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .close-btn {
+      align-self: flex-end;
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Clickable Trigger Text -->
+  <p>Click <span class="video-link" id="openPopupBtn">this specific link text</span> to watch the featured clip.</p>
+
+  <!-- Popup Box (Initially hidden by browser default) -->
+  <dialog id="videoPopup">
+    <div class="popup-content">
+      <button class="close-btn" id="closePopupBtn">✕ Close</button>
+      
+      <!-- HTML5 Video Tag -->
+      <video id="popupVideo" controls>
+        <source src="https://w3schools.com" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </dialog>
+
+  <script>
+    const openBtn = document.getElementById('openPopupBtn');
+    const closeBtn = document.getElementById('closePopupBtn');
+    const modal = document.getElementById('videoPopup');
+    const video = document.getElementById('popupVideo');
+
+    // Open popup and play video when text is clicked
+    openBtn.addEventListener('click', () => {
+      modal.showModal(); // Native browser method to open <dialog> as a modal popup
+      video.play();
+    });
+
+    // Close popup and pause video when close button is clicked
+    closeBtn.addEventListener('click', () => {
+      modal.close(); // Native browser method to hide <dialog>
+      video.pause();
+      video.currentTime = 0; // Resets the video to the beginning
+    });
+
+    // Optional: Close popup if user clicks outside the modal box
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.close();
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -13,6 +13,14 @@ body {
     background: url("valbg.jpg") center/cover no-repeat fixed;
 }
 
+.nightmarket {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("BetaKeyArt_VALORANT.jpg") center/cover no-repeat fixed;
+}
+
 .container {
     width: 380px;
     padding: 40px;
@@ -24,6 +32,30 @@ body {
     text-align: center;
     margin-bottom: 10px;
     color: #222;
+}
+
+.ul { 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li{ 
+    color: #7a7a7a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+li a { 
+    color: #7a7a7a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+li a:hover { 
+    color: #0c0c0c;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .subtitle { 
