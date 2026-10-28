@@ -8,9 +8,19 @@ function checkLogin(event) {
 
     const correctEmail = "admin@gmail.com";
     const correctPassword = "12345678";
+    
+    const originalColor = "#eeeeee";
+    const purple = "#cd6aeb";
 
+    function setColors(outlineColor) {
+        message.style.color = outlineColor;
+        email.style.borderColor = outlineColor;
+        password.style.borderColor = outlineColor;
+    }
+    
     if (email.value === correctEmail && password.value === correctPassword) {
         console.log("Login successful!");
+        setColors(originalColor);
         message.textContent = " ";
         if (stayIn.checked) {
             console.log("Stay signed in");
@@ -19,10 +29,8 @@ function checkLogin(event) {
         }
     } else {
         message.textContent = "Your username or password is incorrect. Please try again.";
-        message.style.color = "#d038ff";
-        email.style.borderColor = "#d038ff";
-        password.style.borderColor = "#d038ff";
-        email.style.backgroundColor = "#f6d9ff";
-        password.style.backgroundColor = "#f6d9ff";
+        setColors(purple);
+        email.style.borderWidth = "2px";
+        password.style.borderWidth = "2px";
     }
 }
