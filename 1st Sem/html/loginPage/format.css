@@ -65,6 +65,12 @@ li a:hover {
     margin-bottom: 30px;
 }
 
+.message { 
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
 
 /*inputs like username, email*/
 .input-group { 
