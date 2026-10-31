@@ -13,19 +13,17 @@ function checkLogin(event) {
     const purple = "#cd6aeb";
 
     function setColors(outlineColor) {
-        message.style.color = outlineColor;
         email.style.borderColor = outlineColor;
         password.style.borderColor = outlineColor;
     }
     
     if (email.value === correctEmail && password.value === correctPassword) {
-        console.log("Login successful!");
         setColors(originalColor);
         message.textContent = " ";
         if (stayIn.checked) {
-            console.log("Stay signed in");
+            console.log("Log in Success! Stay signed in");
         } else {
-            console.log("Don't stay signed in");
+            console.log("Log in Success! Don't stay signed in");
         }
     } else {
         console.log("Login failure!");
