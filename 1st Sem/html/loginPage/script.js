@@ -34,3 +34,25 @@ function checkLogin(event) {
         password.style.borderWidth = "2px";
     }
 }
+
+function sendEmail(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email");
+    const subheading = document.getElementById("subheading");
+    
+    const originalTextContent = "Enter your email address and we'll send you a link to reset your password.";
+    const originalColor = "#777";
+
+    console.log("Email sent to " + email.value);
+    subheading.textContent = "A password reset link has been sent to your email address.";
+    subheading.style.color = "#cd6aeb";
+    subheading.style.fontWeight = "bold";
+
+    setTimeout(() => {
+        subheading.textContent = originalTextContent;
+        subheading.style.color = originalColor;
+        subheading.style.fontWeight = "normal";
+    }, 5000);
+}
+
